@@ -1,8 +1,8 @@
 spring:
   application:
-    name: storypath
+    name: journal_app
   config:
-    import: optional:file:storypath_backend/.env[.properties]
+    import: optional:file:.env[.properties]
   profiles:
     active: ${ACTIVE_PROFILE}
 server:
