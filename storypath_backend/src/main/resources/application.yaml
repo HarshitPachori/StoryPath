@@ -6,4 +6,4 @@ spring:
   profiles:
     active: ${ACTIVE_PROFILE}
 server:
-  port: ${PORT}
+  port: 8080
