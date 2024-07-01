@@ -42,7 +42,7 @@ public class SecurityConfig {
                             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                                 CorsConfiguration cfg = new CorsConfiguration();
                                 cfg.setAllowedOrigins(
-                                        List.of("http://localhost:5173"));
+                                        List.of("http://localhost:5173", "https://story-path-nu.vercel.app"));
                                 cfg.addAllowedMethod("*");
                                 cfg.setAllowCredentials(true);
                                 cfg.addAllowedHeader("*");
