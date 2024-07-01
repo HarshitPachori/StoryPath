@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: journal_app
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    active: ${ACTIVE_PROFILE}
+server:
+  port: 8080

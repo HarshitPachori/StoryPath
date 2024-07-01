@@ -1,0 +1,28 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: journal_app_db
+      auto-index-creation: true
+  #    redis:
+  #      host: localhost
+  #      port: 6379
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${GMAIL_USERNAME}
+    password: ${GMAIL_APP_PASSWORD}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+#  cache:
+#    type: caffeine
+#    cache-names:
+#      - users
+#      - journals
+#    caffeine:
+#      spec: maximumSize=500, expireAfterAccess=60m
