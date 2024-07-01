@@ -269,3 +269,34 @@ git clone https://github.com/HarshitPachori/StoryPath.git
   - ### [Postman Collection Link](https://restless-moon-499399.postman.co/workspace/New-Team-Workspace~c7722ba8-7049-40b0-97c9-e367daa05b43/collection/23880545-2625be57-f365-488a-934e-4d7a9fe64389?action=share&creator=23880545)   -->
 
 - ## Snapshots
+<img src="./snapshots/s1.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s2.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s3.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s4.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s5.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s6.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s7.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s8.png" />
+&nbsp;
+<img src="./snapshots/s9.png" />
+&nbsp;
+<img src="./snapshots/s10.png" />
+&nbsp;
+<img src="./snapshots/s11.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s12.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s13.png" height="500"/>
+&nbsp;
+<img src="./snapshots/s14.png" />
+&nbsp;
+<img src="./snapshots/s17.png" />
+&nbsp;
+<img src="./snapshots/s16.png" />
