@@ -3,6 +3,7 @@ package com.example.storypath_backend.service.impl;
 import com.example.storypath_backend.model.User;
 import com.example.storypath_backend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

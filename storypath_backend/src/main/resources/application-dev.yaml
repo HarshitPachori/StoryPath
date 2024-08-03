@@ -19,10 +19,11 @@ spring:
           auth: true
           starttls:
             enable: true
-#  cache:
-#    type: caffeine
-#    cache-names:
-#      - users
-#      - journals
-#    caffeine:
-#      spec: maximumSize=500, expireAfterAccess=60m
+  cache:
+    type: caffeine
+    cache-names:
+      - users
+      - journals
+    caffeine:
+      spec: maximumSize=500, expireAfterAccess=60m
+

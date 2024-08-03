@@ -6,11 +6,15 @@ import com.example.storypath_backend.payload.UserDto;
 import com.example.storypath_backend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.bson.types.ObjectId;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,9 +25,10 @@ import java.util.Map;
 public class UserController {
     private final UserService userService;
 
+    @Cacheable(cacheNames = "users",key = "#principal.getName()")
     @GetMapping("/profile")
-    public ResponseEntity<Map<String, Object>> getProfile(@RequestHeader(HttpHeaders.AUTHORIZATION) String jwtToken) {
-        UserDto userProfile = userService.getProfile(jwtToken);
+    public ResponseEntity<Map<String, Object>> getProfile(Principal principal) {
+        UserDto userProfile = userService.getProfile(principal.getName());
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
         response.put("message", "Profile fetched successfully");
