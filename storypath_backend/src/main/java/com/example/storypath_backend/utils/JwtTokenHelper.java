@@ -7,7 +7,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +21,7 @@ import java.util.function.Function;
 public class JwtTokenHelper {
 
     public String getUsernameFromToken(String token) {
-//        log.info("fetching username from token {}", token);
+        log.info("fetching username from token {}", token);
         if (token.startsWith("Bearer ")) {
             token = token.substring(7);
         }

@@ -9,7 +9,7 @@ import org.bson.types.ObjectId;
 import java.util.List;
 
 public interface UserService {
-    UserDto getProfile(String username);
+    UserDto getProfile(String jwtToken);
 
     UserDto updateProfile(String jwtToken);
 
