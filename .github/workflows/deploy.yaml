@@ -14,20 +14,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: "corretto"
-          java-version: 17
+#      - name: Setup JDK 17
+#        uses: actions/setup-java@v4
+#        with:
+#          distribution: "corretto"
+#          java-version: 17
 
       # - name: Unit Tests
       #   run: mvn -B test --file ride_fast_backend/pom.xml
 
-      - name: Package and Build the application
-        run: |
-          cd storypath_backend
-          mvn clean
-          mvn -B package -DskipTests --file pom.xml
+#      - name: Package and Build the application
+#        run: |
+#          cd storypath_backend
+#          mvn clean
+#          mvn -B package -DskipTests --file pom.xml
 
       - name: Build Docker Image
         uses: docker/build-push-action@v5
@@ -48,3 +48,7 @@ jobs:
           context: ./storypath_backend
           push: true
           tags: ${{secrets.DOCKER_HUB_USERNAME}}/storypath-backend:latest
+
+      - name: Trigger Render.com Redeploy
+        run: |
+          curl -X POST https://api.render.com/deploy/srv-cq1d3el6l47c73ajp3u0?key=${{ secrets.RENDER_DEPLOY_KEY }}

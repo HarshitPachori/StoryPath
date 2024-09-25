@@ -5,5 +5,7 @@ spring:
     import: optional:file:storypath_backend/.env[.properties]
   profiles:
     active: ${ACTIVE_PROFILE}
+  main:
+    lazy-initialization: true
 server:
   port: 8080
